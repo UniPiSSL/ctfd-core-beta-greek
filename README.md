@@ -8,4 +8,4 @@ Rewritten version of the CTFd core theme to use Bootstrap 5, Alpine.js, and vite
 - Create a cookie cutter template package to use with Vite
 
 ## Fork changes
-- translated into Greek
+- translated into Greek :greece:
