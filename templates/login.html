@@ -3,7 +3,7 @@
 {% block content %}
   <div class="jumbotron">
     <div class="container">
-      <h1>Login</h1>
+      <h1>Σύνδεση</h1>
     </div>
   </div>
 
@@ -14,7 +14,7 @@
 
         {% if integrations.mlc() %}
           <a class="btn btn-secondary btn-lg btn-block w-100" href="{{ url_for('auth.oauth_login') }}">
-            Login with Major League Cyber
+            Σύνδεση μέσο Major League Cyber
           </a>
 
           <hr>
@@ -35,7 +35,7 @@
             <div class="row pt-3">
               <div class="col-6 col-md-8">
                 <a class="align-middle" href="{{ url_for('auth.reset_password') }}">
-                  Forgot your password?
+                  Ξεχάσατε τον κωδικό σας;
                 </a>
               </div>
 

@@ -9,7 +9,7 @@
 
         {% if show_optionals %}
           {% if field.flags.required is false %}
-            <small class="ms-1 text-muted">(Optional)</small>
+            <small class="ms-1 text-muted">(Προαιρετικό)</small>
           {% endif %}
         {% endif %}
 
@@ -30,7 +30,7 @@
         {{ field.label(class="form-label") }}
         {% if show_optionals %}
           {% if field.flags.required is false %}
-            <small class="ms-1 text-muted">(Optional)</small>
+            <small class="ms-1 text-muted">(Προαιρετικό)</small>
           {% endif %}
         {% endif %}
       </div>

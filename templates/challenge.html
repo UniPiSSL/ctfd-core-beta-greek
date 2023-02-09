@@ -7,14 +7,14 @@
 
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" data-bs-target="#challenge" @click="showChallenge()">Challenge</a>
+            <a class="nav-link active" data-bs-target="#challenge" @click="showChallenge()">Δοκιμασία</a>
           </li>
 
           {% block solves %}
             <li class="nav-item">
               <a class="nav-link challenge-solves" data-bs-target="#solves" @click="showSolves()">
                 {% if solves != None %}
-                  {{ solves }} {% if solves > 1 %}Solves{% else %}Solves{% endif %}
+                  {{ solves }} Λύσ{{ solves.cost|pluralize:("η","εις") }}
                 {% endif %}
               </a>
             </li>
@@ -68,12 +68,12 @@
                   <div x-data="Hint" x-init="id = {{ hint.id }}">
                     {% if hint.content %}
                     <details>
-                      <summary>View Hint</summary>
+                      <summary>Προβολή βοήθειας</summary>
                       <div>{{ hint.html | safe }}</div>
                     </details>
                     {% else %}
                     <details @toggle="showHint(event)">
-                      <summary>Unlock Hint for {{ hint.cost }} points</summary>
+                      <summary>Ξεκλειδώστε την βοήθεια για {{ hint.cost }} πόντο{{ hint.cost|pluralize:("","υς") }}</summary>
                       <div x-html="html"></div>
                     </details>
                     {% endif %}
@@ -113,7 +113,7 @@
               <div class="row text-center">
                 <div class="col-12">
                   <p>
-                    {{ attempts }}/{{ max_attempts }} attempt{{ max_attempts|pluralize }}
+                    {{ attempts }}/{{ max_attempts }} προσπάθει{{ max_attempts|pluralize:("α","ες") }}
                   </p>
                 </div>
               </div>
@@ -130,7 +130,7 @@
                       id="challenge-input" class="challenge-input form-control"
                       type="text" name="submission"
                       @keyup.enter="submitChallenge()"
-                      placeholder="Flag" x-model="submission"
+                      placeholder="Σημαία" x-model="submission"
                   >
                 {% endblock %}
               </div>
@@ -161,7 +161,7 @@
                   >
                     <strong x-text="response.data.message"></strong>
                     <div x-show="(response.data.status == 'correct' || response.data.status == 'already_solved') && getNextId()">
-                      <button @click="nextChallenge()" class="btn btn-info mt-3">Next Challenge</button>
+                      <button @click="nextChallenge()" class="btn btn-info mt-3">Επόμενη Δοκιμασία</button>
                     </div>
                   </div>
                 </template>
@@ -175,9 +175,9 @@
                 <table class="table table-striped text-center">
                   <thead>
                   <tr>
-                    <td><b>Name</b>
+                    <td><b>Όνομα</b>
                     </td>
-                    <td><b>Date</b>
+                    <td><b>Hμερομηνία</b>
                     </td>
                   </tr>
                   </thead>

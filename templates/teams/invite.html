@@ -3,7 +3,7 @@
 {% block content %}
   <div class="jumbotron">
     <div class="container">
-      <h1>Join Team</h1>
+      <h1>Γίνετε μέλος της ομάδας</h1>
     </div>
   </div>
   <div class="container">
@@ -12,14 +12,14 @@
         {% include "components/errors.html" %}
 
         <p class="h3 text-center mt-md-4">
-          Welcome to <strong>{{ team.name }}</strong>!
+          Καλωσόρισες στην ομάδα <strong>{{ team.name }}</strong>!
         </p>
 
         <p class="text-center">
-          Click the button below to join the team!
+          Κάντε κλικ στο κουμπί παρακάτω για να γίνετε μέλος της ομάδας!
           <br>
           <small class="text-muted">
-            Or <a href="{{ url_for('teams.new') }}">click here</a> if you'd prefer to create your own team.
+            Or <a href="{{ url_for('teams.new') }}">κάντε κλικ εδώ</a> αν προτιμάτε να δημιουργήσετε τη δική σας ομάδα.
           </small>
         </p>
 

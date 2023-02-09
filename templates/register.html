@@ -3,7 +3,7 @@
 {% block content %}
   <div class="jumbotron">
     <div class="container">
-      <h1>Register</h1>
+      <h1>Εγγραφή</h1>
     </div>
   </div>
 
@@ -14,7 +14,7 @@
 
         {% if integrations.mlc() %}
           <a class="btn btn-secondary btn-lg btn-block w-100" href="{{ url_for('auth.oauth_login') }}">
-            Login with Major League Cyber
+            Σύνδεση μέσο Major League Cyber
           </a>
 
           <hr>
@@ -30,7 +30,7 @@
               <b>{{ form.name.label(class="form-label") }}</b>
               {{ form.name(class="form-control", value=name) }}
               <small class="form-text text-muted">
-                Your username on the site
+                Το όνομα χρήστη σας στον ιστότοπο
               </small>
             </div>
 
@@ -38,7 +38,7 @@
               <b>{{ form.email.label(class="form-label") }}</b>
               {{ form.email(class="form-control", value=email) }}
               <small class="form-text text-muted">
-                Never shown to the public
+                Δεν θα προβλήθεί ποτέ δημόσια
               </small>
             </div>
 
@@ -46,7 +46,7 @@
               <b>{{ form.password.label(class="form-label") }}</b>
               {{ form.password(class="form-control", value=password) }}
               <small class="form-text text-muted">
-                Password used to log into your account
+                Κωδικός πρόσβασης για τη σύνδεση στο λογαριασμό σας
               </small>
             </div>
 
@@ -64,9 +64,9 @@
               <div class="row pt-3">
                 <div class="col-md-12 text-center">
                   <small class="text-muted text-center">
-                    By registering, you agree to the
-                    <a href="{{ Configs.privacy_link }}" rel="noopener" target="_blank">privacy policy</a>
-                    and <a href="{{ Configs.tos_link }}" rel="noopener" target="_blank">terms of service</a>
+                    Με την εγγραφή σας, συμφωνείτε με την
+                    <a href="{{ Configs.privacy_link }}" rel="noopener" target="_blank">πολιτική απορρήτου</a>
+                    και τους <a href="{{ Configs.tos_link }}" rel="noopener" target="_blank">όρους χρήσης</a>
                   </small>
                 </div>
               </div>

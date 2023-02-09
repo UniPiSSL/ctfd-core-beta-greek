@@ -4,7 +4,7 @@
 {% block content %}
   <div class="jumbotron">
     <div class="container">
-      <h1>Settings</h1>
+      <h1>Ρυθμίσεις</h1>
     </div>
   </div>
 
@@ -16,7 +16,7 @@
           <button
               class="nav-link active" id="settings-profile-tab" data-bs-toggle="pill"
               data-bs-target="#profile" role="tab"
-          >Profile
+          >Προφίλ
           </button>
           <button
               class="nav-link" id="settings-tokens-tab" data-bs-toggle="pill" data-bs-target="#tokens"
@@ -84,8 +84,8 @@
                       class="alert alert-success alert-dismissible submit-row" role="alert"
                       x-cloak="success" x-show="success"
                   >
-                    <strong>Success!</strong>
-                    Your profile has been updated
+                    <strong>Επιτυχής!</strong>
+                    Το προφίλ σου ενημερώθηκε
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                     </button>
                   </div>
@@ -93,7 +93,7 @@
 
                   <template x-for="(msg, idx) in errors" :key="idx">
                     <div class="alert alert-danger alert-dismissible" role="alert">
-                      <span class="sr-only">Error:</span>
+                      <span class="sr-only">Σφάλμα:</span>
                       <span x-text="msg"></span>
                       <button
                           type="button" class="btn-close" data-bs-dismiss="alert"
@@ -119,7 +119,7 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title">API Key Generated</h5>
+                        <h5 class="modal-title">Δημιουργήθηκε κλειδί για το API</h5>
                         <button
                             type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"
@@ -127,7 +127,7 @@
                       </div>
 
                       <div class="modal-body">
-                        <p>Please copy your API Key, it won't be shown again!</p>
+                        <p>Αντιγράψτε το κλειδί σας για το API, δεν θα εμφανιστεί ξανά!</p>
 
                         <div class="input-group mb-3">
                           <input
@@ -145,7 +145,7 @@
 
                       <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                          Got it!
+                          Το έπιασα!
                         </button>
                       </div>
                     </div>
@@ -180,7 +180,7 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title">Delete Token</h5>
+                        <h5 class="modal-title">Διαγραφή Token</h5>
                         <button
                             type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"
@@ -189,17 +189,17 @@
                       </div>
 
                       <div class="modal-body">
-                        <p>Are you sure you want to delete this token?</p>
+                        <p>Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το token;</p>
                       </div>
 
                       <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                          No
+                          Όχι
                         </button>
                         <button
                             type="button" class="btn btn-primary" data-bs-dismiss="modal"
                             @click="deleteSelectedToken()"
-                        >Yes
+                        >Ναι
                         </button>
                       </div>
                     </div>
@@ -209,9 +209,9 @@
                 <table class="table table-striped">
                   <thead>
                   <tr>
-                    <td class="text-center"><b>Created</b></td>
-                    <td><b>Expiration</b></td>
-                    <td><b>Delete</b></td>
+                    <td class="text-center"><b>Δημιουργία</b></td>
+                    <td><b>Λήξη</b></td>
+                    <td><b>Διαγραφή</b></td>
                   </tr>
                   </thead>
                   <tbody>

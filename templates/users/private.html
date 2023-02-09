@@ -53,12 +53,12 @@
       <div>
         <h2 class="text-center">
           {% if account.place %}
-            {{ account.place }} <small>place</small>
+            {{ account.place }} <small>θέση</small>
           {% endif %}
         </h2>
         <h2 class="text-center">
           {% if account.place %}
-            {{ account.score }} <small>points</small>
+            {{ account.score }} <small>πόντοι</small>
           {% endif %}
         </h2>
       </div>
@@ -85,7 +85,7 @@
       {% if awards %}
         <div class="row">
           <div class="col-md-12">
-            <h3>Awards</h3>
+            <h3>Βραβεία</h3>
 
           </div>
           {% for award in awards %}
@@ -107,14 +107,14 @@
 
       <div class="row">
         <div class="col-md-12">
-          <h3>Solves</h3>
+          <h3>Λύσεις</h3>
           <table class="table table-striped">
             <thead>
             <tr>
-              <td><b>Challenge</b></td>
-              <td class="d-none d-md-block d-lg-block"><b>Category</b></td>
-              <td><b>Value</b></td>
-              <td><b>Time</b></td>
+              <td><b>Δοκιμασία</b></td>
+              <td class="d-none d-md-block d-lg-block"><b>Κατηγορία</b></td>
+              <td><b>Αξία</b></td>
+              <td><b>Ημερομηνία</b></td>
             </tr>
             </thead>
             <tbody>
@@ -200,7 +200,7 @@
     {% else %}
       <div class="row min-vh-25">
         <h3 class="opacity-50 text-center w-100 justify-content-center align-self-center">
-          No solves yet
+          Δεν υπάρχουν λύσεις ακόμα
         </h3>
       </div>
     {% endif %}

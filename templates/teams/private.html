@@ -5,7 +5,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-action text-center w-100">Edit Team</h2>
+          <h2 class="modal-action text-center w-100">Επεξεργασία Ομάδας</h2>
           <button type="button" class="cursor-pointer btn-close" data-bs-dismiss="modal" aria-label="Close">
           </button>
         </div>
@@ -73,7 +73,7 @@
                     role="alert" x-cloak="success" x-show="success"
                 >
                   <strong>Success!</strong>
-                  Your team's profile has been updated
+                  Το προφίλ της ομάδας σας έχει ενημερωθεί
                   <button type="button" class="cursor-pointer btn-close" data-bs-dismiss="alert" aria-label="Close">
                   </button>
                 </div>
@@ -101,7 +101,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-action text-center w-100">Choose Captain</h2>
+          <h2 class="modal-action text-center w-100">Επιλέξτε Αρχηγό</h2>
           <button type="button" class="cursor-pointer btn-close" data-bs-dismiss="modal" aria-label="Close">
           </button>
         </div>
@@ -124,13 +124,13 @@
                     x-show="success"
                 >
                   <strong>Success!</strong>
-                  Your captain rights have been transferred
+                  Τα δικαιώματα του αρχηγού σας έχουν μεταφερθεί
                   <button type="button" class="cursor-pointer btn-close" data-bs-dismiss="alert" aria-label="Close">
                   </button>
                 </div>
                 <template x-for="(msg, idx) in errors" :key="idx">
                   <div class="alert alert-danger alert-dismissible" role="alert">
-                    <span class="sr-only">Error:</span>
+                    <span class="sr-only">Σφάλμα:</span>
                     <span x-text="msg"></span>
                     <button type="button" class="cursor-pointer btn-close" data-bs-dismiss="alert" aria-label="Close">
                     </button>
@@ -149,7 +149,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-action text-center w-100">Invite Users</h2>
+          <h2 class="modal-action text-center w-100">Πρόσκληση χρηστών</h2>
           <button type="button" class="cursor-pointer btn-close" data-bs-dismiss="modal" aria-label="Close">
           </button>
         </div>
@@ -168,10 +168,10 @@
                 </div>
 
                 <small class="form-text text-muted">
-                  Share this link with your team members for them to join your team
+                  Μοιραστείτε αυτόν τον σύνδεσμο τους συμπαίκτες σας για να ενταχθούν στην ομάδα σας
                 </small>
                 <small class="form-text text-muted">
-                  Invite links can be re-used and expire after 1 day
+                  Οι σύνδεσμοι πρόσκλησης μπορούν να επαναχρησιμοποιηθούν αλλά λήγουν μετά από 1 ημέρα
                 </small>
               </div>
             </form>
@@ -190,7 +190,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <p class="mb-0">Are you sure you want to disband your team?</p>
+          <p class="mb-0">Είστε βέβαιοι ότι θέλετε να διαλύσετε την ομάδα σας;</p>
 
           <div class="mt-3">
             <template x-for="(msg, idx) in errors" :key="idx">
@@ -203,8 +203,8 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
-          <button type="button" class="btn btn-primary" @click="disbandTeam()" :disabled="errors.length > 0">Yes</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Όχι</button>
+          <button type="button" class="btn btn-primary" @click="disbandTeam()" :disabled="errors.length > 0">Ναι</button>
         </div>
       </div>
     </div>
@@ -255,7 +255,7 @@
       <h2 id="team-score" class="text-center">
         {% if score %}
           {{ score }}
-          <small>points</small>
+          <small>πόντοι</small>
         {% endif %}
       </h2>
 
@@ -312,12 +312,12 @@
 
     <div class="row min-vh-25">
       <div class="col-md-12">
-        <h3>Members</h3>
+        <h3>Μέλη</h3>
         <table class="table table-striped">
           <thead>
           <tr>
-            <td><b>User Name</b></td>
-            <td><b>Score</b></td>
+            <td><b>Όνομα Χρήστη</b></td>
+            <td><b>Πόντοι</b></td>
           </tr>
           </thead>
           <tbody>
@@ -329,7 +329,7 @@
                   {{ member.name }}
                 </a>
                 {% if team.captain_id == member.id %}
-                  <span class="badge bg-primary ms-2">Captain</span>
+                  <span class="badge bg-primary ms-2">Αρχηγός</span>
                 {% endif %}
               </td>
               <td>{{ member.score }}</td>
@@ -345,7 +345,7 @@
       {% if awards %}
         <div class="row">
           <div class="col-md-12">
-            <h3>Awards</h3>
+            <h3>Βραβεία</h3>
           </div>
 
           {% for award in awards %}
@@ -368,14 +368,14 @@
 
       <div class="row">
         <div class="col-md-12">
-          <h3>Solves</h3>
+          <h3>Λύσεις</h3>
           <table class="table table-striped">
             <thead>
             <tr>
-              <td><b>Challenge</b></td>
-              <td class="d-none d-md-block d-lg-block"><b>Category</b></td>
-              <td><b>Value</b></td>
-              <td><b>Time</b></td>
+              <td><b>Δοκιμασία</b></td>
+              <td class="d-none d-md-block d-lg-block"><b>Κατηγορία</b></td>
+              <td><b>Αξία</b></td>
+              <td><b>Ημερομηνία</b></td>
             </tr>
             </thead>
             <tbody>
@@ -465,7 +465,7 @@
     {% else %}
       <div class="row min-vh-25">
         <h3 class="opacity-50 text-center w-100 justify-content-center align-self-center">
-          No solves yet
+          Δεν υπάρχουν λύσεις ακόμα
         </h3>
       </div>
     {% endif %}
