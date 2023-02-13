@@ -14,7 +14,7 @@
             <li class="nav-item">
               <a class="nav-link challenge-solves" data-bs-target="#solves" @click="showSolves()">
                 {% if solves != None %}
-                  {{ solves }} Λύσ{{ solves.cost|pluralize:("η","εις") }}
+                  {{ solves }} Λύσ{{ solves.cost|pluralize("η","εις") }}
                 {% endif %}
               </a>
             </li>
@@ -73,7 +73,7 @@
                     </details>
                     {% else %}
                     <details @toggle="showHint(event)">
-                      <summary>Ξεκλειδώστε την βοήθεια για {{ hint.cost }} πόντο{{ hint.cost|pluralize:("","υς") }}</summary>
+                      <summary>Ξεκλειδώστε την βοήθεια για {{ hint.cost }} πόντο{{ hint.cost|pluralize("","υς") }}</summary>
                       <div x-html="html"></div>
                     </details>
                     {% endif %}
@@ -113,7 +113,7 @@
               <div class="row text-center">
                 <div class="col-12">
                   <p>
-                    {{ attempts }}/{{ max_attempts }} προσπάθει{{ max_attempts|pluralize:("α","ες") }}
+                    {{ attempts }}/{{ max_attempts }} προσπάθει{{ max_attempts|pluralize("α","ες") }}
                   </p>
                 </div>
               </div>
